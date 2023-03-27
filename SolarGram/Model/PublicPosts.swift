@@ -11,7 +11,7 @@ import UIKit
 struct PublicPosts {
     
     static let currentUser: User = User(name: "Douglas", photoID: "doug")
-            
+     // updated data to have UIImage to work properly with updated struct
     var sampleData: [Post] = [
         Post(photoID: UIImage(named: "photo1"), description: "Something really great", author: PublicPosts.currentUser),
         Post(photoID: UIImage(named: "photo2"), description: "Something really great", author: User(name: "Joe", photoID: "joe")),
@@ -32,7 +32,7 @@ struct PublicPosts {
         
         sampleData[actualIndex].isFavorite.toggle()
     }
-    
+    //deletes appropriate post
     mutating func deletePost(_ post: Post) {
         let postIndex = sampleData.firstIndex { p in
             p.id == post.id
@@ -41,7 +41,7 @@ struct PublicPosts {
         
         sampleData.remove(at: actualIndex)
     }
-    
+    //adds new post from viewModel
     mutating func addPost
     (post: Post) {
         sampleData.append(post)

@@ -35,7 +35,7 @@ final class ViewModel: ObservableObject {
             self.model.addPost(post: newPost)
         }
     }
-    
+    //delete post function
     func deletePost(_ post: Post) {
         model.deletePost(post)
     }

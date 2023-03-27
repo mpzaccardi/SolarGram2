@@ -50,6 +50,7 @@ struct PhotoRow: View {
                 }
             }.buttonStyle(.plain)
             Spacer()
+            // tests for user before displaying button to delete
             if post.author.id == PublicPosts.currentUser.id {
                 Button {
                     viewModel.deletePost(post)
